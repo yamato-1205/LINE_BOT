@@ -1,0 +1,7 @@
+Laravel公式サイト
+https://readouble.com/laravel/9.x/ja/installation.html
+
+この記事を参考
+https://brainlog.jp/programming/laravel/post-3690/
+
+example-appの階層まで行って./vendor/bin/sail upを実行
