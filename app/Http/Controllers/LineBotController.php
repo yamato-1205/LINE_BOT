@@ -62,7 +62,7 @@ class LineBotController extends Controller
                 // 応答メッセージを作成
                 $message = new TextMessage([
                     'type' => 'text',
-                    'text' => $eventMessageText . "って言いました",
+                    'text' => $eventMessageText . "なんていうなよW",
                 ]);
 
                 // 応答リクエストを作成
