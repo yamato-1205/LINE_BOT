@@ -59,10 +59,14 @@ class LineBotController extends Controller
                 // テキストメッセージを取得
                 $eventMessageText = $eventMessage->getText();
 
+                // 文字数カウント
+                $stringCount = mb_strlen($eventMessageText);
+
                 // 応答メッセージを作成
                 $message = new TextMessage([
                     'type' => 'text',
-                    'text' => $eventMessageText . "なんていうなよW",
+                    // 'text' => $eventMessageText . "なんていうなよw",
+                    'text' => "あなたの送信したテキストの文字数は" . $stringCount . "文字です。",
                 ]);
 
                 // 応答リクエストを作成
