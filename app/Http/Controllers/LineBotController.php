@@ -13,9 +13,6 @@ use LINE\Webhook\Model\Mention;
 use LINE\Parser\EventRequestParser;
 use Illuminate\Support\Facades\Log;
 
-use Google_Client;
-use Google_Service_YouTub;
-
 class LineBotController extends Controller {
   public function reply(Request $request) {
     // チャネルシークレットとチャネルアクセストークンを読み込む
@@ -79,6 +76,10 @@ class LineBotController extends Controller {
             } else {
               $message = $controller(3);
             }
+            break;
+          case "ヘルプ":
+            $controller = new HelpController();
+            $message = $controller();
             break;
           default:
             $controller = new DefaultController();
